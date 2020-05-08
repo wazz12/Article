@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Font Size-->
+    <dimen name="font_size_20_sp">20sp</dimen>
+    <dimen name="font_size_15_sp">15sp</dimen>
+    <dimen name="font_size_12_sp">12sp</dimen>
+
+    <dimen name="margin_0_dp">0dp</dimen>
+    <dimen name="margin_5_dp">5dp</dimen>
+    <dimen name="margin_10_dp">10dp</dimen>
+    <dimen name="margin_20_dp">20dp</dimen>
+
+    <dimen name="avatar_image_size">64dp</dimen>
+    <dimen name="big_avatar_image_size">80dp</dimen>
+
+</resources>

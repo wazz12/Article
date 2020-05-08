@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Articles</string>
+
+    <string name="error_message">Error occurred while retrieving data</string>
+    <string name="no_network_error_message">No internet connection available. Please try again later.</string>
+    <string name="network_error">Network Error</string>
+
+    <string name="article_list">Article List</string>
+</resources>

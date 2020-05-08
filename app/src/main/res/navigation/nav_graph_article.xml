@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_article"
+    app:startDestination="@id/articleListFragment">
+
+    <fragment
+        android:id="@+id/articleListFragment"
+        android:name="com.dbs.articles.feature.articleList.ArticleListFragment"
+        android:label="articleListFragment"
+        tools:layout="@layout/fragment_article_list" />
+
+</navigation>
