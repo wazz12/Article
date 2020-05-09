@@ -1,6 +1,5 @@
 package com.dbs.articles.network
 
-import android.util.Log
 import retrofit2.Response
 import java.io.IOException
 
@@ -15,7 +14,7 @@ open class BaseRepo {
             is Result.Success ->
                 data = result.data
             is Result.Error -> {
-                Log.d("BaseRepo", "$errorMessage & Exception - ${result.exception}")
+                print("BaseRepo $errorMessage & Exception - ${result.exception}");
             }
         }
 
