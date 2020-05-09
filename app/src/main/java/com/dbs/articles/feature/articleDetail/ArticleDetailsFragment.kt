@@ -6,8 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import com.dbs.articles.R
 import com.dbs.articles.feature.ArticleMainActivity.Companion.ARTICLE
+import com.dbs.articles.feature.ArticleMainActivity.Companion.ARTICLE_DETAIL
+import com.dbs.articles.feature.ArticleMainActivity.Companion.TITLE
 import com.dbs.articles.feature.BaseFragment
 import com.dbs.articles.feature.appToolbarActionTitle
 import com.dbs.articles.feature.appToolbarTitle
@@ -60,6 +63,7 @@ class ArticleDetailsFragment : BaseFragment() {
             toolbar.appToolbarActionTitle(getString(R.string.edit))
             it.setOnClickListener {
                 // open edit screen
+                openEditArticle()
             }
         }
     }
@@ -99,5 +103,13 @@ class ArticleDetailsFragment : BaseFragment() {
     private fun setArticleData(text: String) {
         article_detail_description_text_view.text = text
         setAvatarImage(requireContext(), avatar, avatar_image_view)
+    }
+
+    private fun openEditArticle() {
+        val bundle = Bundle()
+        bundle.putString(TITLE, title)
+        bundle.putParcelable(ARTICLE_DETAIL, articleDetail)
+        Navigation.findNavController(requireActivity(), R.id.nav_frag_container)
+            .navigate(R.id.action_articleDetailFragment_to_articleEditFragment, bundle)
     }
 }

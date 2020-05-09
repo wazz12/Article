@@ -7,4 +7,9 @@
 
     <string name="article_list">Article List</string>
     <string name="edit">Edit</string>
+
+    <string name="enter_detail_description">Enter description*</string>
+    <string name="description_empty_error">Description cannot be empty</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>

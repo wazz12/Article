@@ -23,6 +23,22 @@
         <argument
             android:name="ARTICLE"
             app:argType="com.dbs.articles.model.Article" />
+        <action
+            android:id="@+id/action_articleDetailFragment_to_articleEditFragment"
+            app:destination="@id/articleEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleEditFragment"
+        android:name="com.dbs.articles.feature.articleEdit.ArticleEditFragment"
+        android:label="articleEditFragment"
+        tools:layout="@layout/fragment_edit_article">
+        <argument
+            android:name="TITLE"
+            app:argType="string" />
+        <argument
+            android:name="ARTICLE_DETAIL"
+            app:argType="com.dbs.articles.model.ArticleDetail" />
     </fragment>
 
 </navigation>

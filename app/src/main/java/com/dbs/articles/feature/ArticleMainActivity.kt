@@ -30,6 +30,8 @@ class ArticleMainActivity : AppCompatActivity() {
 
     companion object {
         const val ARTICLE = "ARTICLE"
+        const val TITLE = "TITLE"
+        const val ARTICLE_DETAIL = "ARTICLE_DETAIL"
     }
 }
 
