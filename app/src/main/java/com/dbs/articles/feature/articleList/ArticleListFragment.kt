@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dbs.articles.R
 import com.dbs.articles.feature.ArticleClickListener
+import com.dbs.articles.feature.ArticleMainActivity.Companion.ARTICLE
 import com.dbs.articles.feature.BaseFragment
 import com.dbs.articles.feature.appToolbarTitle
 import com.dbs.articles.model.Article
@@ -87,5 +89,13 @@ class ArticleListFragment : BaseFragment(), ArticleClickListener {
 
     override fun onArticleClick(position: Int) {
         val article = articleListAdapter.getItem(position)
+        openArticleDetail(article)
+    }
+
+    private fun openArticleDetail(article: Article) {
+        val bundle = Bundle()
+        bundle.putParcelable(ARTICLE, article)
+        Navigation.findNavController(requireActivity(), R.id.nav_frag_container)
+            .navigate(R.id.action_articleListFragment_to_articleDetailFragment, bundle)
     }
 }

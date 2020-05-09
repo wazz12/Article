@@ -27,6 +27,10 @@ class ArticleMainActivity : AppCompatActivity() {
 
         getNavController().setGraph(graph, provideStartArgBundle())
     }
+
+    companion object {
+        const val ARTICLE = "ARTICLE"
+    }
 }
 
 //For Activity Call

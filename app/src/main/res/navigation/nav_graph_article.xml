@@ -9,6 +9,20 @@
         android:id="@+id/articleListFragment"
         android:name="com.dbs.articles.feature.articleList.ArticleListFragment"
         android:label="articleListFragment"
-        tools:layout="@layout/fragment_article_list" />
+        tools:layout="@layout/fragment_article_list">
+        <action
+            android:id="@+id/action_articleListFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.dbs.articles.feature.articleDetail.ArticleDetailsFragment"
+        android:label="articleDetailFragment"
+        tools:layout="@layout/fragment_article_detail">
+        <argument
+            android:name="ARTICLE"
+            app:argType="com.dbs.articles.model.Article" />
+    </fragment>
 
 </navigation>

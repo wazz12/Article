@@ -11,3 +11,9 @@ data class Article(
     var short_description: String,
     var avatar: String
 ) : Parcelable
+
+@Parcelize
+data class ArticleDetail(
+    var id: Int,
+    var text: String
+) : Parcelable
